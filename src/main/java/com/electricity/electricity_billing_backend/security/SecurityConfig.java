@@ -92,8 +92,11 @@ public class SecurityConfig {
 
 
         configuration.setAllowedOrigins(
-                List.of("http://localhost:4200")
-        );
+        List.of(
+                "http://localhost:4200",
+                "https://electricity-billing-backend-production.up.railway.app"
+        )
+);
 
 
         configuration.setAllowedMethods(
