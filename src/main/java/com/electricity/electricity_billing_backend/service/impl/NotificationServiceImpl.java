@@ -96,15 +96,19 @@ public class NotificationServiceImpl implements NotificationService {
                 "Notification Created : {}",
                 savedNotification.getTitle()
         );
-        emailService.sendEmail(
+       try {
 
-                consumer.getEmail(),
+    emailService.sendEmail(
+            consumer.getEmail(),
+            notification.getTitle(),
+            notification.getMessage()
+    );
 
-                notification.getTitle(),
+} catch (Exception ex) {
 
-                notification.getMessage()
+    log.error("Notification email failed: {}", ex.getMessage());
 
-        );
+}
 
         return notificationMapper.toResponse(notification);
 
@@ -136,32 +140,34 @@ public class NotificationServiceImpl implements NotificationService {
                     bill.getBillNumber()
             );
 
-            emailService.sendEmail(
+            try {
 
-                    bill.getConsumer().getEmail(),
+    emailService.sendEmail(
+            bill.getConsumer().getEmail(),
+            "Electricity Bill Due Reminder",
+            """
+            Dear %s,
 
-                    "Electricity Bill Due Reminder",
+            Your electricity bill is due on %s.
 
-                    """
-                    Dear %s,
-    
-                    Your electricity bill is due on %s.
-    
-                    Amount : ₹%s
-    
-                    Please pay before due date.
-    
-                    Thank you.
-                    """
-                            .formatted(
+            Amount : ₹%s
 
-                                    bill.getConsumer().getFullName(),
+            Please pay before due date.
 
-                                    bill.getDueDate(),
+            Thank you.
+            """
+                    .formatted(
+                            bill.getConsumer().getFullName(),
+                            bill.getDueDate(),
+                            bill.getTotalAmount()
+                    )
+    );
 
-                                    bill.getTotalAmount()
-                            )
-            );
+} catch (Exception ex) {
+
+    log.error("Reminder email failed: {}", ex.getMessage());
+
+}
             log.info(
                     "Reminder Email Sent To {}",
                     bill.getConsumer().getEmail()
