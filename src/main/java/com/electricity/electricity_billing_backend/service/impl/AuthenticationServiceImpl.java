@@ -59,34 +59,38 @@ public class AuthenticationServiceImpl implements AuthenticationService {
 
         log.info("New user registered: {}", savedUser.getEmail());
 
-        emailService.sendEmail(
+       try {
 
-                savedUser.getEmail(),
+    emailService.sendEmail(
+            savedUser.getEmail(),
+            "Welcome to Electricity Billing System",
+            """
+            Dear %s,
 
-                "Welcome to Electricity Billing System",
+            Welcome to Electricity Billing Management System.
 
-                """
-                Dear %s,
-        
-                Welcome to Electricity Billing Management System.
-        
-                Your account has been created successfully.
-        
-                Email : %s
-        
-                Role : %s
-        
-                Thank you.
-                """
-                        .formatted(
+            Your account has been created successfully.
 
-                                savedUser.getFullName(),
+            Email : %s
 
-                                savedUser.getEmail(),
+            Role : %s
 
-                                savedUser.getRole().getName()
-                        )
-        );
+            Thank you.
+            """
+                    .formatted(
+                            savedUser.getFullName(),
+                            savedUser.getEmail(),
+                            savedUser.getRole().getName()
+                    )
+    );
+
+    log.info("Welcome email sent to {}", savedUser.getEmail());
+
+} catch (Exception ex) {
+
+    log.error("Email sending failed: {}", ex.getMessage());
+
+}
 
         String token = jwtService.generateToken(
                 new org.springframework.security.core.userdetails.User(
