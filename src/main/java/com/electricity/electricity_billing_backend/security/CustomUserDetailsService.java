@@ -2,9 +2,8 @@ package com.electricity.electricity_billing_backend.security;
 
 import com.electricity.electricity_billing_backend.entity.User;
 import com.electricity.electricity_billing_backend.repository.UserRepository;
-
 import lombok.RequiredArgsConstructor;
-
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -13,6 +12,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Slf4j
 @Service
 @RequiredArgsConstructor
 public class CustomUserDetailsService implements UserDetailsService {
@@ -27,6 +27,11 @@ public class CustomUserDetailsService implements UserDetailsService {
                 .orElseThrow(() ->
                         new UsernameNotFoundException("User not found with email: " + email));
 
+        String authority = user.getRole().getName().name();
+
+        log.info("User: {}", user.getEmail());
+        log.info("Authority Loaded: {}", authority);
+
         return new org.springframework.security.core.userdetails.User(
                 user.getEmail(),
                 user.getPassword(),
@@ -34,7 +39,7 @@ public class CustomUserDetailsService implements UserDetailsService {
                 true,
                 true,
                 true,
-                List.of(new SimpleGrantedAuthority(user.getRole().getName().name()))
+                List.of(new SimpleGrantedAuthority(authority))
         );
     }
 }
