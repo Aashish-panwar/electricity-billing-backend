@@ -43,13 +43,13 @@ public class JwtService {
 
     Map<String, Object> claims = new HashMap<>();
 
-    claims.put(
-            "role",
-            userDetails.getAuthorities()
-                    .iterator()
-                    .next()
-                    .getAuthority()
-    );
+    String role = userDetails.getAuthorities()
+            .stream()
+            .findFirst()
+            .map(authority -> authority.getAuthority())
+            .orElse("");
+
+    claims.put("role", role);
 
     return generateToken(claims, userDetails);
 }
