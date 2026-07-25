@@ -18,7 +18,6 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/consumers")
 @RequiredArgsConstructor
-@CrossOrigin(origins = "*")
 @Tag(
         name = "Consumer Management",
         description = "APIs for managing electricity consumers"
