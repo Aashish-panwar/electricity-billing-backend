@@ -87,49 +87,35 @@ public class SecurityConfig {
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
 
+    CorsConfiguration configuration = new CorsConfiguration();
 
-        CorsConfiguration configuration = new CorsConfiguration();
+    configuration.setAllowedOriginPatterns(
+            List.of(
+                    "http://localhost:4200",
+                    "https://electricity-billing-frontend.vercel.app"
+            )
+    );
 
+    configuration.setAllowedMethods(
+            List.of(
+                    "GET",
+                    "POST",
+                    "PUT",
+                    "DELETE",
+                    "PATCH",
+                    "OPTIONS"
+            )
+    );
 
-        configuration.setAllowedOrigins(
-        List.of(
-                "http://localhost:4200",
-                "https://electricity-billing-frontend.vercel.app"
-        )
-);
+    configuration.setAllowedHeaders(List.of("*"));
 
+    configuration.setAllowCredentials(true);
 
-        configuration.setAllowedMethods(
-                List.of(
-                        "GET",
-                        "POST",
-                        "PUT",
-                        "DELETE",
-                        "PATCH",
-                        "OPTIONS"
-                )
-        );
+    UrlBasedCorsConfigurationSource source =
+            new UrlBasedCorsConfigurationSource();
 
+    source.registerCorsConfiguration("/**", configuration);
 
-        configuration.setAllowedHeaders(
-                List.of("*")
-        );
-
-
-        configuration.setAllowCredentials(true);
-
-
-
-        UrlBasedCorsConfigurationSource source =
-                new UrlBasedCorsConfigurationSource();
-
-
-        source.registerCorsConfiguration(
-                "/**",
-                configuration
-        );
-
-
-        return source;
-    }
+    return source;
+}
 }
