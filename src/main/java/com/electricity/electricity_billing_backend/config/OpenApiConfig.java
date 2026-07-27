@@ -21,8 +21,11 @@ public class OpenApiConfig {
 
         return new OpenAPI()
 
-                // Railway HTTPS URL
+                // API Servers
                 .servers(List.of(
+                        new Server()
+                                .url("http://localhost:8080")
+                                .description("Local Server"),
                         new Server()
                                 .url("https://electricity-billing-backend-production.up.railway.app")
                                 .description("Production Server")
