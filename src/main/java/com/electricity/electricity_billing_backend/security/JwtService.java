@@ -41,6 +41,10 @@ public class JwtService {
 
     public String generateToken(UserDetails userDetails) {
 
+    log.info("========== NEW JWT SERVICE VERSION ==========");
+    log.info("Repository updated successfully.");
+    log.info("Username : {}", userDetails.getUsername());
+
     Map<String, Object> claims = new HashMap<>();
 
     String role = userDetails.getAuthorities()
@@ -49,7 +53,11 @@ public class JwtService {
             .map(authority -> authority.getAuthority())
             .orElse("");
 
+    log.info("Role added to JWT : {}", role);
+
     claims.put("role", role);
+
+    log.info("Claims before token generation : {}", claims);
 
     return generateToken(claims, userDetails);
 }
