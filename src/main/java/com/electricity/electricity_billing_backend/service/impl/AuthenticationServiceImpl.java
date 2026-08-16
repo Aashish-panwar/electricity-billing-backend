@@ -9,6 +9,8 @@ import com.electricity.electricity_billing_backend.enums.RoleType;
 import com.electricity.electricity_billing_backend.exception.DuplicateResourceException;
 import com.electricity.electricity_billing_backend.repository.RoleRepository;
 import com.electricity.electricity_billing_backend.repository.UserRepository;
+import com.electricity.electricity_billing_backend.repository.PasswordResetTokenRepository;
+import com.electricity.electricity_billing_backend.entity.PasswordResetToken;
 import com.electricity.electricity_billing_backend.security.JwtService;
 import com.electricity.electricity_billing_backend.service.AuthenticationService;
 import jakarta.transaction.Transactional;
@@ -27,6 +29,7 @@ public class AuthenticationServiceImpl implements AuthenticationService {
 
     private final UserRepository userRepository;
     private final RoleRepository roleRepository;
+    private final PasswordResetTokenRepository passwordResetTokenRepository;
     private final PasswordEncoder passwordEncoder;
     private final JwtService jwtService;
     private final AuthenticationManager authenticationManager;
@@ -158,5 +161,57 @@ public class AuthenticationServiceImpl implements AuthenticationService {
                 .role(user.getRole().getName().name())
                 .message("Login Successful")
                 .build();
+    }
+
+    @Override
+    public void forgotPassword(com.electricity.electricity_billing_backend.dto.request.ForgotPasswordRequest request) {
+        User user = userRepository.findByEmail(request.getEmail())
+                .orElseThrow(() -> new RuntimeException("User with this email does not exist."));
+
+        // Delete any existing tokens for this user
+        passwordResetTokenRepository.deleteByUser(user);
+
+        // Generate token
+        String token = java.util.UUID.randomUUID().toString();
+        PasswordResetToken resetToken = PasswordResetToken.builder()
+                .token(token)
+                .user(user)
+                .expiryDate(java.time.LocalDateTime.now().plusHours(1))
+                .build();
+
+        passwordResetTokenRepository.save(resetToken);
+
+        String frontendUrl = System.getenv().getOrDefault("FRONTEND_URL", "http://localhost:4200");
+        String resetLink = frontendUrl + "/reset-password?token=" + token;
+
+        try {
+            emailService.sendEmail(
+                    user.getEmail(),
+                    "Password Reset Request",
+                    "Click the link to reset your password (valid for 1 hour):\n\n" + resetLink
+            );
+            log.info("Password reset email sent to {}", user.getEmail());
+        } catch (Exception ex) {
+            log.error("Failed to send reset email", ex);
+            throw new RuntimeException("Failed to send reset email");
+        }
+    }
+
+    @Override
+    public void resetPassword(com.electricity.electricity_billing_backend.dto.request.ResetPasswordRequest request) {
+        PasswordResetToken resetToken = passwordResetTokenRepository.findByToken(request.getToken())
+                .orElseThrow(() -> new RuntimeException("Invalid or expired token."));
+
+        if (resetToken.getExpiryDate().isBefore(java.time.LocalDateTime.now())) {
+            passwordResetTokenRepository.delete(resetToken);
+            throw new RuntimeException("Token has expired.");
+        }
+
+        User user = resetToken.getUser();
+        user.setPassword(passwordEncoder.encode(request.getNewPassword()));
+        userRepository.save(user);
+
+        passwordResetTokenRepository.delete(resetToken);
+        log.info("Password successfully reset for user: {}", user.getEmail());
     }
 }

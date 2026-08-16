@@ -9,4 +9,7 @@ public interface AuthenticationService {
     AuthenticationResponse register(RegisterRequest request);
 
     AuthenticationResponse login(LoginRequest request);
+
+    void forgotPassword(com.electricity.electricity_billing_backend.dto.request.ForgotPasswordRequest request);
+    void resetPassword(com.electricity.electricity_billing_backend.dto.request.ResetPasswordRequest request);
 }

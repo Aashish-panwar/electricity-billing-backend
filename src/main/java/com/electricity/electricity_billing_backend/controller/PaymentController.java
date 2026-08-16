@@ -3,6 +3,12 @@ package com.electricity.electricity_billing_backend.controller;
 import com.electricity.electricity_billing_backend.dto.request.PaymentRequest;
 import com.electricity.electricity_billing_backend.dto.response.PaymentResponse;
 import com.electricity.electricity_billing_backend.service.PaymentService;
+import com.electricity.electricity_billing_backend.service.RazorpayService;
+import com.electricity.electricity_billing_backend.repository.BillRepository;
+import com.electricity.electricity_billing_backend.entity.Bill;
+import com.electricity.electricity_billing_backend.enums.PaymentMethod;
+import com.electricity.electricity_billing_backend.dto.response.RazorpayOrderResponse;
+import com.electricity.electricity_billing_backend.dto.request.RazorpayVerificationRequest;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
@@ -13,6 +19,7 @@ import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.math.BigDecimal;
 
 @RestController
 @RequestMapping("/api/payments")
@@ -22,6 +29,47 @@ import java.util.List;
 public class PaymentController {
 
     private final PaymentService paymentService;
+    private final RazorpayService razorpayService;
+    private final BillRepository billRepository;
+
+    @Operation(summary = "Create Razorpay Order")
+    @PostMapping("/create-razorpay-order")
+    @PreAuthorize("hasAnyRole('ADMIN','EMPLOYEE','CONSUMER')")
+    public ResponseEntity<RazorpayOrderResponse> createRazorpayOrder(@RequestParam Long billId) throws Exception {
+        Bill bill = billRepository.findById(billId)
+                .orElseThrow(() -> new RuntimeException("Bill not found"));
+        
+        com.razorpay.Order order = razorpayService.createOrder(bill);
+        
+        return ResponseEntity.ok(RazorpayOrderResponse.builder()
+                .orderId(order.get("id"))
+                .amount(order.get("amount").toString())
+                .currency(order.get("currency"))
+                .build());
+    }
+
+    @Operation(summary = "Verify Razorpay Payment")
+    @PostMapping("/verify-razorpay-payment")
+    @PreAuthorize("hasAnyRole('ADMIN','EMPLOYEE','CONSUMER')")
+    public ResponseEntity<PaymentResponse> verifyRazorpayPayment(@RequestParam Long billId, @Valid @RequestBody RazorpayVerificationRequest request) {
+        boolean isValid = razorpayService.verifyPaymentSignature(
+                request.getRazorpayOrderId(), 
+                request.getRazorpayPaymentId(), 
+                request.getRazorpaySignature()
+        );
+
+        if (!isValid) {
+            throw new RuntimeException("Payment signature verification failed");
+        }
+
+        // Create the payment record
+        PaymentRequest paymentRequest = new PaymentRequest();
+        paymentRequest.setBillId(billId);
+        paymentRequest.setAmount(billRepository.findById(billId).get().getTotalAmount());
+        paymentRequest.setPaymentMethod(PaymentMethod.CARD); 
+
+        return ResponseEntity.ok(paymentService.makePayment(paymentRequest));
+    }
 
     @Operation(summary = "Make Payment")
     @PostMapping

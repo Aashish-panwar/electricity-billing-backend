@@ -23,6 +23,9 @@ import java.util.List;
 @RequiredArgsConstructor
 public class SecurityConfig {
 
+    @org.springframework.beans.factory.annotation.Value("${FRONTEND_URL:https://electricity-billing-frontend.vercel.app}")
+    private String frontendUrl;
+
 
     private final JwtAuthenticationFilter jwtAuthenticationFilter;
 
@@ -92,7 +95,7 @@ public class SecurityConfig {
     configuration.setAllowedOriginPatterns(
             List.of(
                     "http://localhost:4200",
-                    "https://electricity-billing-frontend.vercel.app"
+                    frontendUrl
             )
     );
 
