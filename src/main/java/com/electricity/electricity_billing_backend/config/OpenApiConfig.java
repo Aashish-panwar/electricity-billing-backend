@@ -14,6 +14,9 @@ import java.util.List;
 @Configuration
 public class OpenApiConfig {
 
+    @org.springframework.beans.factory.annotation.Value("${BACKEND_URL:http://localhost:8080}")
+    private String backendUrl;
+
     @Bean
     public OpenAPI electricityBillingAPI() {
 
@@ -21,11 +24,11 @@ public class OpenApiConfig {
 
         return new OpenAPI()
 
-                // Railway HTTPS URL
+                // API Server URL
                 .servers(List.of(
                         new Server()
-                                .url("https://electricity-billing-backend-production.up.railway.app")
-                                .description("Production Server")
+                                .url(backendUrl)
+                                .description("API Server")
                 ))
 
                 .info(

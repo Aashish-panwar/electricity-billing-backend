@@ -1,856 +1,155 @@
-2026-07-19 10:12:02 INFO  c.e.e.ElectricityBillingBackendApplication - Starting ElectricityBillingBackendApplication using Java 17.0.19 with PID 6892 (D:\HTML AND CSS\Electiricity Billing System\electricity-billing-backend\target\classes started by panwa in D:\HTML AND CSS\Electiricity Billing System\electricity-billing-backend)
-2026-07-19 10:12:02 DEBUG c.e.e.ElectricityBillingBackendApplication - Running with Spring Boot v4.0.7, Spring v7.0.8
-2026-07-19 10:12:02 INFO  c.e.e.ElectricityBillingBackendApplication - No active profile set, falling back to 1 default profile: "default"
-2026-07-19 10:12:02 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2026-07-19 10:12:02 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2026-07-19 10:12:04 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-07-19 10:12:04 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 82 ms. Found 10 JPA repository interfaces.
-2026-07-19 10:12:05 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2026-07-19 10:12:05 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2026-07-19 10:12:05 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.22]
-2026-07-19 10:12:05 INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 3178 ms
-2026-07-19 10:12:05 INFO  org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-07-19 10:12:06 INFO  org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.2.19.Final
-2026-07-19 10:12:06 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-07-19 10:12:06 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2026-07-19 10:12:06 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6c81e0d7
-2026-07-19 10:12:06 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2026-07-19 10:12:07 INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
-	Database JDBC URL [jdbc:mysql://localhost:3306/electricity_billing_db?createDatabaseIfNotExist=true&useSSL=false&serverTimezone=UTC]
+2026-08-15 22:11:37 INFO  c.e.e.ElectricityBillingBackendApplication - Starting ElectricityBillingBackendApplication using Java 17.0.12 with PID 7188 (D:\HTML AND CSS\Electiricity Billing System\electricity-billing-backend\target\classes started by panwa in D:\HTML AND CSS\Electiricity Billing System\electricity-billing-backend)
+2026-08-15 22:11:37 INFO  c.e.e.ElectricityBillingBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2026-08-15 22:11:37 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-08-15 22:11:37 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-08-15 22:11:38 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-08-15 22:11:38 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 80 ms. Found 10 JPA repository interfaces.
+2026-08-15 22:11:39 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-08-15 22:11:39 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-08-15 22:11:39 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-08-15 22:11:39 INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 2437 ms
+2026-08-15 22:11:40 ERROR o.s.b.t.s.DeferredServletContainerInitializers - Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'jwtAuthenticationFilter' defined in file [D:\HTML AND CSS\Electiricity Billing System\electricity-billing-backend\target\classes\com\electricity\electricity_billing_backend\security\JwtAuthenticationFilter.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'jwtService': Injection of autowired dependencies failed
+2026-08-15 22:11:40 INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2026-08-15 22:11:40 WARN  o.s.b.w.s.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server
+2026-08-15 22:11:40 INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-08-15 22:11:40 ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.context.ApplicationContextException: Unable to start web server
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:167)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:615)
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at com.electricity.electricity_billing_backend.ElectricityBillingBackendApplication.main(ElectricityBillingBackendApplication.java:13)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:52)
+Caused by: org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+	at org.springframework.boot.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:150)
+	at org.springframework.boot.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:110)
+	at org.springframework.boot.tomcat.servlet.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:408)
+	at org.springframework.boot.tomcat.servlet.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:166)
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:190)
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:164)
+	... 13 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'jwtAuthenticationFilter' defined in file [D:\HTML AND CSS\Electiricity Billing System\electricity-billing-backend\target\classes\com\electricity\electricity_billing_backend\security\JwtAuthenticationFilter.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'jwtService': Injection of autowired dependencies failed
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1380)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1219)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:565)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:231)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:185)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:180)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAdaptableBeans(ServletContextInitializerBeans.java:165)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:97)
+	at org.springframework.boot.web.context.servlet.WebApplicationContextInitializer.initialize(WebApplicationContextInitializer.java:53)
+	at org.springframework.boot.tomcat.servlet.DeferredServletContainerInitializers.onStartup(DeferredServletContainerInitializers.java:55)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4420)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1162)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1158)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:81)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:714)
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:780)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1162)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1158)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:81)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:714)
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:201)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:410)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:864)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:435)
+	at org.springframework.boot.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:131)
+	... 18 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jwtService': Injection of autowired dependencies failed
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:499)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1444)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveBean(DefaultListableBeanFactory.java:1232)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1711)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1658)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:912)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 58 common frames omitted
+Caused by: org.springframework.util.PlaceholderResolutionException: Could not resolve placeholder 'JWT_SECRET' in value "${JWT_SECRET}" <-- "${jwt.secret}"
+	at org.springframework.util.PlaceholderResolutionException.withValue(PlaceholderResolutionException.java:81)
+	at org.springframework.util.PlaceholderParser$ParsedValue.resolve(PlaceholderParser.java:296)
+	at org.springframework.util.PlaceholderParser.replacePlaceholders(PlaceholderParser.java:129)
+	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:96)
+	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:286)
+	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:257)
+	at org.springframework.context.support.PropertySourcesPlaceholderConfigurer.lambda$processProperties$0(PropertySourcesPlaceholderConfigurer.java:184)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveEmbeddedValue(AbstractBeanFactory.java:959)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1679)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1658)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:764)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:748)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:146)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:493)
+	... 70 common frames omitted
+2026-08-15 22:26:16 INFO  c.e.e.ElectricityBillingBackendApplication - Starting ElectricityBillingBackendApplication using Java 17.0.12 with PID 21508 (D:\HTML AND CSS\Electiricity Billing System\electricity-billing-backend\target\classes started by panwa in D:\HTML AND CSS\Electiricity Billing System\electricity-billing-backend)
+2026-08-15 22:26:16 INFO  c.e.e.ElectricityBillingBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2026-08-15 22:26:16 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-08-15 22:26:16 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-08-15 22:26:17 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-08-15 22:26:17 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 87 ms. Found 10 JPA repository interfaces.
+2026-08-15 22:26:18 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-08-15 22:26:18 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-08-15 22:26:18 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-08-15 22:26:18 INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 2586 ms
+2026-08-15 22:26:19 INFO  org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-08-15 22:26:19 INFO  org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.2.19.Final
+2026-08-15 22:26:19 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-08-15 22:26:19 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-08-15 22:26:23 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7321f2f3
+2026-08-15 22:26:23 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-08-15 22:26:24 INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://electricity-mysql-electricity-billing-2026.b.aivencloud.com:20784/defaultdb?sslMode=REQUIRED]
 	Database driver: MySQL Connector/J
 	Database dialect: MySQLDialect
-	Database version: 8.0.46
-	Default catalog/schema: electricity_billing_db/undefined
+	Database version: 8.4.8
+	Default catalog/schema: defaultdb/undefined
 	Autocommit mode: undefined/unknown
 	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
 	JDBC fetch size: none
 	Pool: DataSourceConnectionProvider
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2026-07-19 10:12:08 INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-07-19 10:12:08 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-07-19 10:12:08 INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-07-19 10:12:09 DEBUG c.e.e.s.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
-2026-07-19 10:12:09 INFO  o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
-2026-07-19 10:12:09 WARN  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
-2026-07-19 10:12:11 TRACE o.s.c.a.AnnotationCacheOperationSource - Adding cacheable method 'generateBill' with operations: [Builder[public com.electricity.electricity_billing_backend.dto.response.BillResponse com.electricity.electricity_billing_backend.service.impl.BillServiceImpl.generateBill(com.electricity.electricity_billing_backend.dto.request.BillRequest)] caches=[statistics] | key='' | keyGenerator='' | cacheManager='' | cacheResolver='' | condition='',true,false]
-2026-07-19 10:12:11 TRACE o.s.c.a.AnnotationCacheOperationSource - Adding cacheable method 'deleteBill' with operations: [Builder[public void com.electricity.electricity_billing_backend.service.impl.BillServiceImpl.deleteBill(java.lang.Long)] caches=[statistics] | key='' | keyGenerator='' | cacheManager='' | cacheResolver='' | condition='',true,false]
-2026-07-19 10:12:11 TRACE o.s.c.a.AnnotationCacheOperationSource - Adding cacheable method 'updateConsumer' with operations: [Builder[public com.electricity.electricity_billing_backend.dto.response.ConsumerResponse com.electricity.electricity_billing_backend.service.impl.ConsumerServiceImpl.updateConsumer(java.lang.Long,com.electricity.electricity_billing_backend.dto.request.ConsumerRequest)] caches=[statistics] | key='' | keyGenerator='' | cacheManager='' | cacheResolver='' | condition='',true,false]
-2026-07-19 10:12:11 TRACE o.s.c.a.AnnotationCacheOperationSource - Adding cacheable method 'deleteConsumer' with operations: [Builder[public void com.electricity.electricity_billing_backend.service.impl.ConsumerServiceImpl.deleteConsumer(java.lang.Long)] caches=[statistics] | key='' | keyGenerator='' | cacheManager='' | cacheResolver='' | condition='',true,false]
-2026-07-19 10:12:11 TRACE o.s.c.a.AnnotationCacheOperationSource - Adding cacheable method 'createConsumer' with operations: [Builder[public com.electricity.electricity_billing_backend.dto.response.ConsumerResponse com.electricity.electricity_billing_backend.service.impl.ConsumerServiceImpl.createConsumer(com.electricity.electricity_billing_backend.dto.request.ConsumerRequest)] caches=[statistics] | key='' | keyGenerator='' | cacheManager='' | cacheResolver='' | condition='',true,false]
-2026-07-19 10:12:11 TRACE o.s.c.a.AnnotationCacheOperationSource - Adding cacheable method 'createMeter' with operations: [Builder[public com.electricity.electricity_billing_backend.dto.response.MeterResponse com.electricity.electricity_billing_backend.service.impl.MeterServiceImpl.createMeter(com.electricity.electricity_billing_backend.dto.request.MeterRequest)] caches=[statistics] | key='' | keyGenerator='' | cacheManager='' | cacheResolver='' | condition='',true,false]
-2026-07-19 10:12:11 TRACE o.s.c.a.AnnotationCacheOperationSource - Adding cacheable method 'deleteMeter' with operations: [Builder[public void com.electricity.electricity_billing_backend.service.impl.MeterServiceImpl.deleteMeter(java.lang.Long)] caches=[statistics] | key='' | keyGenerator='' | cacheManager='' | cacheResolver='' | condition='',true,false]
-2026-07-19 10:12:11 TRACE o.s.c.a.AnnotationCacheOperationSource - Adding cacheable method 'makePayment' with operations: [Builder[public com.electricity.electricity_billing_backend.dto.response.PaymentResponse com.electricity.electricity_billing_backend.service.impl.PaymentServiceImpl.makePayment(com.electricity.electricity_billing_backend.dto.request.PaymentRequest)] caches=[statistics] | key='' | keyGenerator='' | cacheManager='' | cacheResolver='' | condition='',true,false, Builder[public com.electricity.electricity_billing_backend.dto.response.PaymentResponse com.electricity.electricity_billing_backend.service.impl.PaymentServiceImpl.makePayment(com.electricity.electricity_billing_backend.dto.request.PaymentRequest)] caches=[reports] | key='' | keyGenerator='' | cacheManager='' | cacheResolver='' | condition='',true,false]
-2026-07-19 10:12:11 TRACE o.s.c.a.AnnotationCacheOperationSource - Adding cacheable method 'getStatisticsReport' with operations: [Builder[public com.electricity.electricity_billing_backend.dto.response.StatisticsReportResponse com.electricity.electricity_billing_backend.service.impl.ReportServiceImpl.getStatisticsReport()] caches=[statistics] | key='' | keyGenerator='' | cacheManager='' | cacheResolver='' | condition='' | unless='' | sync='false']
-2026-07-19 10:12:11 TRACE o.s.c.a.AnnotationCacheOperationSource - Adding cacheable method 'getAllTariffs' with operations: [Builder[public java.util.List com.electricity.electricity_billing_backend.service.impl.TariffServiceImpl.getAllTariffs()] caches=[tariffs] | key='' | keyGenerator='' | cacheManager='' | cacheResolver='' | condition='' | unless='' | sync='false']
-2026-07-19 10:12:11 TRACE o.s.c.a.AnnotationCacheOperationSource - Adding cacheable method 'deleteTariff' with operations: [Builder[public void com.electricity.electricity_billing_backend.service.impl.TariffServiceImpl.deleteTariff(java.lang.Long)] caches=[tariffs] | key='' | keyGenerator='' | cacheManager='' | cacheResolver='' | condition='',true,false]
-2026-07-19 10:12:11 TRACE o.s.c.a.AnnotationCacheOperationSource - Adding cacheable method 'createTariff' with operations: [Builder[public com.electricity.electricity_billing_backend.dto.response.TariffResponse com.electricity.electricity_billing_backend.service.impl.TariffServiceImpl.createTariff(com.electricity.electricity_billing_backend.dto.request.TariffRequest)] caches=[tariffs] | key='' | keyGenerator='' | cacheManager='' | cacheResolver='' | condition='',true,false]
-2026-07-19 10:12:11 TRACE o.s.c.a.AnnotationCacheOperationSource - Adding cacheable method 'updateTariff' with operations: [Builder[public com.electricity.electricity_billing_backend.dto.response.TariffResponse com.electricity.electricity_billing_backend.service.impl.TariffServiceImpl.updateTariff(java.lang.Long,com.electricity.electricity_billing_backend.dto.request.TariffRequest)] caches=[tariffs] | key='' | keyGenerator='' | cacheManager='' | cacheResolver='' | condition='',true,false]
-2026-07-19 10:12:12 INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 14 endpoints beneath base path '/actuator'
-2026-07-19 10:12:13 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
-2026-07-19 10:12:13 INFO  c.e.e.ElectricityBillingBackendApplication - Started ElectricityBillingBackendApplication in 11.283 seconds (process running for 18.341)
-2026-07-19 10:12:34 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-07-19 10:12:34 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2026-07-19 10:12:34 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
-2026-07-19 10:12:35 INFO  o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 950 ms
-2026-07-19 10:13:41 ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
-io.jsonwebtoken.security.SignatureException: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
-	at io.jsonwebtoken.impl.DefaultJwtParser.verifySignature(DefaultJwtParser.java:340)
-	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:579)
-	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:364)
-	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:94)
-	at io.jsonwebtoken.impl.io.AbstractParser.parse(AbstractParser.java:36)
-	at io.jsonwebtoken.impl.io.AbstractParser.parse(AbstractParser.java:29)
-	at io.jsonwebtoken.impl.DefaultJwtParser.parseSignedClaims(DefaultJwtParser.java:830)
-	at com.electricity.electricity_billing_backend.security.JwtService.extractAllClaims(JwtService.java:73)
-	at com.electricity.electricity_billing_backend.security.JwtService.extractClaim(JwtService.java:32)
-	at com.electricity.electricity_billing_backend.security.JwtService.extractUsername(JwtService.java:28)
-	at com.electricity.electricity_billing_backend.security.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.java:41)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231)
-	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141)
-	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:110)
-	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:96)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231)
-	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141)
-	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
-	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231)
-	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141)
-	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
-	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231)
-	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141)
-	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231)
-	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141)
-	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244)
-	at org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$0(ObservationFilterChainDecorator.java:337)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:228)
-	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141)
-	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:237)
-	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:195)
-	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
-	at org.springframework.web.filter.ServletRequestPathFilter.doFilter(ServletRequestPathFilter.java:52)
-	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
-	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
-	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebSecurityConfiguration.java:317)
-	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:355)
-	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:272)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
-	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:110)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1272)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1801)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
-	at java.base/java.lang.Thread.run(Thread.java:840)
-2026-07-19 10:14:41 ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
-io.jsonwebtoken.security.SignatureException: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
-	at io.jsonwebtoken.impl.DefaultJwtParser.verifySignature(DefaultJwtParser.java:340)
-	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:579)
-	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:364)
-	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:94)
-	at io.jsonwebtoken.impl.io.AbstractParser.parse(AbstractParser.java:36)
-	at io.jsonwebtoken.impl.io.AbstractParser.parse(AbstractParser.java:29)
-	at io.jsonwebtoken.impl.DefaultJwtParser.parseSignedClaims(DefaultJwtParser.java:830)
-	at com.electricity.electricity_billing_backend.security.JwtService.extractAllClaims(JwtService.java:73)
-	at com.electricity.electricity_billing_backend.security.JwtService.extractClaim(JwtService.java:32)
-	at com.electricity.electricity_billing_backend.security.JwtService.extractUsername(JwtService.java:28)
-	at com.electricity.electricity_billing_backend.security.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.java:41)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231)
-	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141)
-	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:110)
-	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:96)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231)
-	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141)
-	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
-	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231)
-	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141)
-	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
-	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231)
-	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141)
-	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231)
-	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141)
-	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244)
-	at org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$0(ObservationFilterChainDecorator.java:337)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:228)
-	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141)
-	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:237)
-	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:195)
-	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
-	at org.springframework.web.filter.ServletRequestPathFilter.doFilter(ServletRequestPathFilter.java:52)
-	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
-	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
-	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebSecurityConfiguration.java:317)
-	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:355)
-	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:272)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
-	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:110)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1272)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1801)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
-	at java.base/java.lang.Thread.run(Thread.java:840)
-2026-07-19 10:15:18 INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
-2026-07-19 10:15:19 INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
-2026-07-19 10:15:19 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-07-19 10:15:19 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2026-07-19 10:15:19 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2026-07-19 16:37:29 INFO  c.e.e.ElectricityBillingBackendApplication - Starting ElectricityBillingBackendApplication using Java 17.0.19 with PID 12872 (D:\HTML AND CSS\Electiricity Billing System\electricity-billing-backend\target\classes started by panwa in D:\HTML AND CSS\Electiricity Billing System\electricity-billing-backend)
-2026-07-19 16:37:29 DEBUG c.e.e.ElectricityBillingBackendApplication - Running with Spring Boot v4.0.7, Spring v7.0.8
-2026-07-19 16:37:29 INFO  c.e.e.ElectricityBillingBackendApplication - No active profile set, falling back to 1 default profile: "default"
-2026-07-19 16:37:29 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2026-07-19 16:37:29 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2026-07-19 16:37:31 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-07-19 16:37:31 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 112 ms. Found 10 JPA repository interfaces.
-2026-07-19 16:37:32 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2026-07-19 16:37:32 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2026-07-19 16:37:32 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.22]
-2026-07-19 16:37:32 INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 3007 ms
-2026-07-19 16:37:32 INFO  org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-07-19 16:37:32 INFO  org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.2.19.Final
-2026-07-19 16:37:33 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-07-19 16:37:33 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2026-07-19 16:37:33 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3d72ec2
-2026-07-19 16:37:33 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2026-07-19 16:37:34 INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
-	Database JDBC URL [jdbc:mysql://localhost:3306/electricity_billing_db?createDatabaseIfNotExist=true&useSSL=false&serverTimezone=UTC]
-	Database driver: MySQL Connector/J
-	Database dialect: MySQLDialect
-	Database version: 8.0.46
-	Default catalog/schema: electricity_billing_db/undefined
-	Autocommit mode: undefined/unknown
-	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
-	JDBC fetch size: none
-	Pool: DataSourceConnectionProvider
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-07-19 16:37:35 INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-07-19 16:37:35 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-07-19 16:37:36 INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-07-19 16:37:36 DEBUG c.e.e.s.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
-2026-07-19 16:37:36 INFO  o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
-2026-07-19 16:37:36 WARN  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
-2026-07-19 16:37:38 TRACE o.s.c.a.AnnotationCacheOperationSource - Adding cacheable method 'deleteBill' with operations: [Builder[public void com.electricity.electricity_billing_backend.service.impl.BillServiceImpl.deleteBill(java.lang.Long)] caches=[statistics] | key='' | keyGenerator='' | cacheManager='' | cacheResolver='' | condition='',true,false]
-2026-07-19 16:37:38 TRACE o.s.c.a.AnnotationCacheOperationSource - Adding cacheable method 'generateBill' with operations: [Builder[public com.electricity.electricity_billing_backend.dto.response.BillResponse com.electricity.electricity_billing_backend.service.impl.BillServiceImpl.generateBill(com.electricity.electricity_billing_backend.dto.request.BillRequest)] caches=[statistics] | key='' | keyGenerator='' | cacheManager='' | cacheResolver='' | condition='',true,false]
-2026-07-19 16:37:38 TRACE o.s.c.a.AnnotationCacheOperationSource - Adding cacheable method 'updateConsumer' with operations: [Builder[public com.electricity.electricity_billing_backend.dto.response.ConsumerResponse com.electricity.electricity_billing_backend.service.impl.ConsumerServiceImpl.updateConsumer(java.lang.Long,com.electricity.electricity_billing_backend.dto.request.ConsumerRequest)] caches=[statistics] | key='' | keyGenerator='' | cacheManager='' | cacheResolver='' | condition='',true,false]
-2026-07-19 16:37:38 TRACE o.s.c.a.AnnotationCacheOperationSource - Adding cacheable method 'createConsumer' with operations: [Builder[public com.electricity.electricity_billing_backend.dto.response.ConsumerResponse com.electricity.electricity_billing_backend.service.impl.ConsumerServiceImpl.createConsumer(com.electricity.electricity_billing_backend.dto.request.ConsumerRequest)] caches=[statistics] | key='' | keyGenerator='' | cacheManager='' | cacheResolver='' | condition='',true,false]
-2026-07-19 16:37:38 TRACE o.s.c.a.AnnotationCacheOperationSource - Adding cacheable method 'deleteConsumer' with operations: [Builder[public void com.electricity.electricity_billing_backend.service.impl.ConsumerServiceImpl.deleteConsumer(java.lang.Long)] caches=[statistics] | key='' | keyGenerator='' | cacheManager='' | cacheResolver='' | condition='',true,false]
-2026-07-19 16:37:38 TRACE o.s.c.a.AnnotationCacheOperationSource - Adding cacheable method 'createMeter' with operations: [Builder[public com.electricity.electricity_billing_backend.dto.response.MeterResponse com.electricity.electricity_billing_backend.service.impl.MeterServiceImpl.createMeter(com.electricity.electricity_billing_backend.dto.request.MeterRequest)] caches=[statistics] | key='' | keyGenerator='' | cacheManager='' | cacheResolver='' | condition='',true,false]
-2026-07-19 16:37:38 TRACE o.s.c.a.AnnotationCacheOperationSource - Adding cacheable method 'deleteMeter' with operations: [Builder[public void com.electricity.electricity_billing_backend.service.impl.MeterServiceImpl.deleteMeter(java.lang.Long)] caches=[statistics] | key='' | keyGenerator='' | cacheManager='' | cacheResolver='' | condition='',true,false]
-2026-07-19 16:37:38 TRACE o.s.c.a.AnnotationCacheOperationSource - Adding cacheable method 'makePayment' with operations: [Builder[public com.electricity.electricity_billing_backend.dto.response.PaymentResponse com.electricity.electricity_billing_backend.service.impl.PaymentServiceImpl.makePayment(com.electricity.electricity_billing_backend.dto.request.PaymentRequest)] caches=[statistics] | key='' | keyGenerator='' | cacheManager='' | cacheResolver='' | condition='',true,false, Builder[public com.electricity.electricity_billing_backend.dto.response.PaymentResponse com.electricity.electricity_billing_backend.service.impl.PaymentServiceImpl.makePayment(com.electricity.electricity_billing_backend.dto.request.PaymentRequest)] caches=[reports] | key='' | keyGenerator='' | cacheManager='' | cacheResolver='' | condition='',true,false]
-2026-07-19 16:37:38 TRACE o.s.c.a.AnnotationCacheOperationSource - Adding cacheable method 'getStatisticsReport' with operations: [Builder[public com.electricity.electricity_billing_backend.dto.response.StatisticsReportResponse com.electricity.electricity_billing_backend.service.impl.ReportServiceImpl.getStatisticsReport()] caches=[statistics] | key='' | keyGenerator='' | cacheManager='' | cacheResolver='' | condition='' | unless='' | sync='false']
-2026-07-19 16:37:38 TRACE o.s.c.a.AnnotationCacheOperationSource - Adding cacheable method 'getAllTariffs' with operations: [Builder[public java.util.List com.electricity.electricity_billing_backend.service.impl.TariffServiceImpl.getAllTariffs()] caches=[tariffs] | key='' | keyGenerator='' | cacheManager='' | cacheResolver='' | condition='' | unless='' | sync='false']
-2026-07-19 16:37:38 TRACE o.s.c.a.AnnotationCacheOperationSource - Adding cacheable method 'updateTariff' with operations: [Builder[public com.electricity.electricity_billing_backend.dto.response.TariffResponse com.electricity.electricity_billing_backend.service.impl.TariffServiceImpl.updateTariff(java.lang.Long,com.electricity.electricity_billing_backend.dto.request.TariffRequest)] caches=[tariffs] | key='' | keyGenerator='' | cacheManager='' | cacheResolver='' | condition='',true,false]
-2026-07-19 16:37:38 TRACE o.s.c.a.AnnotationCacheOperationSource - Adding cacheable method 'deleteTariff' with operations: [Builder[public void com.electricity.electricity_billing_backend.service.impl.TariffServiceImpl.deleteTariff(java.lang.Long)] caches=[tariffs] | key='' | keyGenerator='' | cacheManager='' | cacheResolver='' | condition='',true,false]
-2026-07-19 16:37:38 TRACE o.s.c.a.AnnotationCacheOperationSource - Adding cacheable method 'createTariff' with operations: [Builder[public com.electricity.electricity_billing_backend.dto.response.TariffResponse com.electricity.electricity_billing_backend.service.impl.TariffServiceImpl.createTariff(com.electricity.electricity_billing_backend.dto.request.TariffRequest)] caches=[tariffs] | key='' | keyGenerator='' | cacheManager='' | cacheResolver='' | condition='',true,false]
-2026-07-19 16:37:40 INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 14 endpoints beneath base path '/actuator'
-2026-07-19 16:37:40 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
-2026-07-19 16:37:40 INFO  c.e.e.ElectricityBillingBackendApplication - Started ElectricityBillingBackendApplication in 11.963 seconds (process running for 13.141)
-2026-07-19 16:59:16 INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
-2026-07-19 16:59:17 INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
-2026-07-19 16:59:17 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-07-19 16:59:17 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2026-07-19 16:59:17 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2026-07-19 16:59:28 INFO  c.e.e.ElectricityBillingBackendApplication - Starting ElectricityBillingBackendApplication using Java 17.0.19 with PID 24456 (D:\HTML AND CSS\Electiricity Billing System\electricity-billing-backend\target\classes started by panwa in D:\HTML AND CSS\Electiricity Billing System\electricity-billing-backend)
-2026-07-19 16:59:28 DEBUG c.e.e.ElectricityBillingBackendApplication - Running with Spring Boot v4.0.7, Spring v7.0.8
-2026-07-19 16:59:28 INFO  c.e.e.ElectricityBillingBackendApplication - No active profile set, falling back to 1 default profile: "default"
-2026-07-19 16:59:28 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2026-07-19 16:59:28 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2026-07-19 16:59:30 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-07-19 16:59:30 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 152 ms. Found 10 JPA repository interfaces.
-2026-07-19 16:59:32 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2026-07-19 16:59:32 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2026-07-19 16:59:32 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.22]
-2026-07-19 16:59:32 INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 4443 ms
-2026-07-19 16:59:33 INFO  org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-07-19 16:59:33 INFO  org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.2.19.Final
-2026-07-19 16:59:34 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-07-19 16:59:34 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2026-07-19 16:59:34 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@29764e6f
-2026-07-19 16:59:34 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2026-07-19 16:59:35 INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
-	Database JDBC URL [jdbc:mysql://localhost:3306/electricity_billing_db?createDatabaseIfNotExist=true&useSSL=false&serverTimezone=UTC]
-	Database driver: MySQL Connector/J
-	Database dialect: MySQLDialect
-	Database version: 8.0.46
-	Default catalog/schema: electricity_billing_db/undefined
-	Autocommit mode: undefined/unknown
-	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
-	JDBC fetch size: none
-	Pool: DataSourceConnectionProvider
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-07-19 16:59:37 INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-07-19 16:59:38 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-07-19 16:59:38 INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-07-19 16:59:38 DEBUG c.e.e.s.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
-2026-07-19 16:59:38 INFO  o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
-2026-07-19 16:59:38 WARN  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
-2026-07-19 16:59:42 TRACE o.s.c.a.AnnotationCacheOperationSource - Adding cacheable method 'generateBill' with operations: [Builder[public com.electricity.electricity_billing_backend.dto.response.BillResponse com.electricity.electricity_billing_backend.service.impl.BillServiceImpl.generateBill(com.electricity.electricity_billing_backend.dto.request.BillRequest)] caches=[statistics] | key='' | keyGenerator='' | cacheManager='' | cacheResolver='' | condition='',true,false]
-2026-07-19 16:59:42 TRACE o.s.c.a.AnnotationCacheOperationSource - Adding cacheable method 'deleteBill' with operations: [Builder[public void com.electricity.electricity_billing_backend.service.impl.BillServiceImpl.deleteBill(java.lang.Long)] caches=[statistics] | key='' | keyGenerator='' | cacheManager='' | cacheResolver='' | condition='',true,false]
-2026-07-19 16:59:42 TRACE o.s.c.a.AnnotationCacheOperationSource - Adding cacheable method 'updateConsumer' with operations: [Builder[public com.electricity.electricity_billing_backend.dto.response.ConsumerResponse com.electricity.electricity_billing_backend.service.impl.ConsumerServiceImpl.updateConsumer(java.lang.Long,com.electricity.electricity_billing_backend.dto.request.ConsumerRequest)] caches=[statistics] | key='' | keyGenerator='' | cacheManager='' | cacheResolver='' | condition='',true,false]
-2026-07-19 16:59:42 TRACE o.s.c.a.AnnotationCacheOperationSource - Adding cacheable method 'createConsumer' with operations: [Builder[public com.electricity.electricity_billing_backend.dto.response.ConsumerResponse com.electricity.electricity_billing_backend.service.impl.ConsumerServiceImpl.createConsumer(com.electricity.electricity_billing_backend.dto.request.ConsumerRequest)] caches=[statistics] | key='' | keyGenerator='' | cacheManager='' | cacheResolver='' | condition='',true,false]
-2026-07-19 16:59:42 TRACE o.s.c.a.AnnotationCacheOperationSource - Adding cacheable method 'deleteConsumer' with operations: [Builder[public void com.electricity.electricity_billing_backend.service.impl.ConsumerServiceImpl.deleteConsumer(java.lang.Long)] caches=[statistics] | key='' | keyGenerator='' | cacheManager='' | cacheResolver='' | condition='',true,false]
-2026-07-19 16:59:42 TRACE o.s.c.a.AnnotationCacheOperationSource - Adding cacheable method 'deleteMeter' with operations: [Builder[public void com.electricity.electricity_billing_backend.service.impl.MeterServiceImpl.deleteMeter(java.lang.Long)] caches=[statistics] | key='' | keyGenerator='' | cacheManager='' | cacheResolver='' | condition='',true,false]
-2026-07-19 16:59:42 TRACE o.s.c.a.AnnotationCacheOperationSource - Adding cacheable method 'createMeter' with operations: [Builder[public com.electricity.electricity_billing_backend.dto.response.MeterResponse com.electricity.electricity_billing_backend.service.impl.MeterServiceImpl.createMeter(com.electricity.electricity_billing_backend.dto.request.MeterRequest)] caches=[statistics] | key='' | keyGenerator='' | cacheManager='' | cacheResolver='' | condition='',true,false]
-2026-07-19 16:59:42 TRACE o.s.c.a.AnnotationCacheOperationSource - Adding cacheable method 'makePayment' with operations: [Builder[public com.electricity.electricity_billing_backend.dto.response.PaymentResponse com.electricity.electricity_billing_backend.service.impl.PaymentServiceImpl.makePayment(com.electricity.electricity_billing_backend.dto.request.PaymentRequest)] caches=[statistics] | key='' | keyGenerator='' | cacheManager='' | cacheResolver='' | condition='',true,false, Builder[public com.electricity.electricity_billing_backend.dto.response.PaymentResponse com.electricity.electricity_billing_backend.service.impl.PaymentServiceImpl.makePayment(com.electricity.electricity_billing_backend.dto.request.PaymentRequest)] caches=[reports] | key='' | keyGenerator='' | cacheManager='' | cacheResolver='' | condition='',true,false]
-2026-07-19 16:59:42 TRACE o.s.c.a.AnnotationCacheOperationSource - Adding cacheable method 'getStatisticsReport' with operations: [Builder[public com.electricity.electricity_billing_backend.dto.response.StatisticsReportResponse com.electricity.electricity_billing_backend.service.impl.ReportServiceImpl.getStatisticsReport()] caches=[statistics] | key='' | keyGenerator='' | cacheManager='' | cacheResolver='' | condition='' | unless='' | sync='false']
-2026-07-19 16:59:42 TRACE o.s.c.a.AnnotationCacheOperationSource - Adding cacheable method 'createTariff' with operations: [Builder[public com.electricity.electricity_billing_backend.dto.response.TariffResponse com.electricity.electricity_billing_backend.service.impl.TariffServiceImpl.createTariff(com.electricity.electricity_billing_backend.dto.request.TariffRequest)] caches=[tariffs] | key='' | keyGenerator='' | cacheManager='' | cacheResolver='' | condition='',true,false]
-2026-07-19 16:59:42 TRACE o.s.c.a.AnnotationCacheOperationSource - Adding cacheable method 'updateTariff' with operations: [Builder[public com.electricity.electricity_billing_backend.dto.response.TariffResponse com.electricity.electricity_billing_backend.service.impl.TariffServiceImpl.updateTariff(java.lang.Long,com.electricity.electricity_billing_backend.dto.request.TariffRequest)] caches=[tariffs] | key='' | keyGenerator='' | cacheManager='' | cacheResolver='' | condition='',true,false]
-2026-07-19 16:59:42 TRACE o.s.c.a.AnnotationCacheOperationSource - Adding cacheable method 'getAllTariffs' with operations: [Builder[public java.util.List com.electricity.electricity_billing_backend.service.impl.TariffServiceImpl.getAllTariffs()] caches=[tariffs] | key='' | keyGenerator='' | cacheManager='' | cacheResolver='' | condition='' | unless='' | sync='false']
-2026-07-19 16:59:42 TRACE o.s.c.a.AnnotationCacheOperationSource - Adding cacheable method 'deleteTariff' with operations: [Builder[public void com.electricity.electricity_billing_backend.service.impl.TariffServiceImpl.deleteTariff(java.lang.Long)] caches=[tariffs] | key='' | keyGenerator='' | cacheManager='' | cacheResolver='' | condition='',true,false]
-2026-07-19 16:59:45 INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 14 endpoints beneath base path '/actuator'
-2026-07-19 16:59:45 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
-2026-07-19 16:59:45 INFO  c.e.e.ElectricityBillingBackendApplication - Started ElectricityBillingBackendApplication in 18.782 seconds (process running for 20.178)
-2026-07-19 16:59:45 INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
-2026-07-19 16:59:46 INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
-2026-07-19 16:59:46 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-07-19 16:59:46 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2026-07-19 16:59:46 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2026-07-19 17:09:08 INFO  c.e.e.ElectricityBillingBackendApplication - Starting ElectricityBillingBackendApplication using Java 17.0.19 with PID 19792 (D:\HTML AND CSS\Electiricity Billing System\electricity-billing-backend\target\classes started by panwa in D:\HTML AND CSS\Electiricity Billing System\electricity-billing-backend)
-2026-07-19 17:09:09 DEBUG c.e.e.ElectricityBillingBackendApplication - Running with Spring Boot v4.0.7, Spring v7.0.8
-2026-07-19 17:09:09 INFO  c.e.e.ElectricityBillingBackendApplication - No active profile set, falling back to 1 default profile: "default"
-2026-07-19 17:09:09 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2026-07-19 17:09:09 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2026-07-19 17:09:11 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-07-19 17:09:11 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 241 ms. Found 10 JPA repository interfaces.
-2026-07-19 17:09:14 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2026-07-19 17:09:14 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2026-07-19 17:09:14 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.22]
-2026-07-19 17:09:14 INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 5719 ms
-2026-07-19 17:09:16 INFO  org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-07-19 17:09:16 INFO  org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.2.19.Final
-2026-07-19 17:09:20 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-07-19 17:09:20 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2026-07-19 17:09:21 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@55a3d1cb
-2026-07-19 17:09:21 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2026-07-19 17:09:22 INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
-	Database JDBC URL [jdbc:mysql://localhost:3306/electricity_billing_db?createDatabaseIfNotExist=true&useSSL=false&serverTimezone=UTC]
-	Database driver: MySQL Connector/J
-	Database dialect: MySQLDialect
-	Database version: 8.0.46
-	Default catalog/schema: electricity_billing_db/undefined
-	Autocommit mode: undefined/unknown
-	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
-	JDBC fetch size: none
-	Pool: DataSourceConnectionProvider
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-07-19 17:09:25 INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-07-19 17:09:26 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-07-19 17:09:26 INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-07-19 17:09:29 DEBUG c.e.e.s.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
-2026-07-19 17:09:29 INFO  o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
-2026-07-19 17:09:29 WARN  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
-2026-07-19 17:09:33 TRACE o.s.c.a.AnnotationCacheOperationSource - Adding cacheable method 'generateBill' with operations: [Builder[public com.electricity.electricity_billing_backend.dto.response.BillResponse com.electricity.electricity_billing_backend.service.impl.BillServiceImpl.generateBill(com.electricity.electricity_billing_backend.dto.request.BillRequest)] caches=[statistics] | key='' | keyGenerator='' | cacheManager='' | cacheResolver='' | condition='',true,false]
-2026-07-19 17:09:33 TRACE o.s.c.a.AnnotationCacheOperationSource - Adding cacheable method 'deleteBill' with operations: [Builder[public void com.electricity.electricity_billing_backend.service.impl.BillServiceImpl.deleteBill(java.lang.Long)] caches=[statistics] | key='' | keyGenerator='' | cacheManager='' | cacheResolver='' | condition='',true,false]
-2026-07-19 17:09:33 TRACE o.s.c.a.AnnotationCacheOperationSource - Adding cacheable method 'createConsumer' with operations: [Builder[public com.electricity.electricity_billing_backend.dto.response.ConsumerResponse com.electricity.electricity_billing_backend.service.impl.ConsumerServiceImpl.createConsumer(com.electricity.electricity_billing_backend.dto.request.ConsumerRequest)] caches=[statistics] | key='' | keyGenerator='' | cacheManager='' | cacheResolver='' | condition='',true,false]
-2026-07-19 17:09:33 TRACE o.s.c.a.AnnotationCacheOperationSource - Adding cacheable method 'updateConsumer' with operations: [Builder[public com.electricity.electricity_billing_backend.dto.response.ConsumerResponse com.electricity.electricity_billing_backend.service.impl.ConsumerServiceImpl.updateConsumer(java.lang.Long,com.electricity.electricity_billing_backend.dto.request.ConsumerRequest)] caches=[statistics] | key='' | keyGenerator='' | cacheManager='' | cacheResolver='' | condition='',true,false]
-2026-07-19 17:09:33 TRACE o.s.c.a.AnnotationCacheOperationSource - Adding cacheable method 'deleteConsumer' with operations: [Builder[public void com.electricity.electricity_billing_backend.service.impl.ConsumerServiceImpl.deleteConsumer(java.lang.Long)] caches=[statistics] | key='' | keyGenerator='' | cacheManager='' | cacheResolver='' | condition='',true,false]
-2026-07-19 17:09:33 TRACE o.s.c.a.AnnotationCacheOperationSource - Adding cacheable method 'createMeter' with operations: [Builder[public com.electricity.electricity_billing_backend.dto.response.MeterResponse com.electricity.electricity_billing_backend.service.impl.MeterServiceImpl.createMeter(com.electricity.electricity_billing_backend.dto.request.MeterRequest)] caches=[statistics] | key='' | keyGenerator='' | cacheManager='' | cacheResolver='' | condition='',true,false]
-2026-07-19 17:09:33 TRACE o.s.c.a.AnnotationCacheOperationSource - Adding cacheable method 'deleteMeter' with operations: [Builder[public void com.electricity.electricity_billing_backend.service.impl.MeterServiceImpl.deleteMeter(java.lang.Long)] caches=[statistics] | key='' | keyGenerator='' | cacheManager='' | cacheResolver='' | condition='',true,false]
-2026-07-19 17:09:33 TRACE o.s.c.a.AnnotationCacheOperationSource - Adding cacheable method 'makePayment' with operations: [Builder[public com.electricity.electricity_billing_backend.dto.response.PaymentResponse com.electricity.electricity_billing_backend.service.impl.PaymentServiceImpl.makePayment(com.electricity.electricity_billing_backend.dto.request.PaymentRequest)] caches=[statistics] | key='' | keyGenerator='' | cacheManager='' | cacheResolver='' | condition='',true,false, Builder[public com.electricity.electricity_billing_backend.dto.response.PaymentResponse com.electricity.electricity_billing_backend.service.impl.PaymentServiceImpl.makePayment(com.electricity.electricity_billing_backend.dto.request.PaymentRequest)] caches=[reports] | key='' | keyGenerator='' | cacheManager='' | cacheResolver='' | condition='',true,false]
-2026-07-19 17:09:33 TRACE o.s.c.a.AnnotationCacheOperationSource - Adding cacheable method 'getStatisticsReport' with operations: [Builder[public com.electricity.electricity_billing_backend.dto.response.StatisticsReportResponse com.electricity.electricity_billing_backend.service.impl.ReportServiceImpl.getStatisticsReport()] caches=[statistics] | key='' | keyGenerator='' | cacheManager='' | cacheResolver='' | condition='' | unless='' | sync='false']
-2026-07-19 17:09:33 TRACE o.s.c.a.AnnotationCacheOperationSource - Adding cacheable method 'updateTariff' with operations: [Builder[public com.electricity.electricity_billing_backend.dto.response.TariffResponse com.electricity.electricity_billing_backend.service.impl.TariffServiceImpl.updateTariff(java.lang.Long,com.electricity.electricity_billing_backend.dto.request.TariffRequest)] caches=[tariffs] | key='' | keyGenerator='' | cacheManager='' | cacheResolver='' | condition='',true,false]
-2026-07-19 17:09:33 TRACE o.s.c.a.AnnotationCacheOperationSource - Adding cacheable method 'getAllTariffs' with operations: [Builder[public java.util.List com.electricity.electricity_billing_backend.service.impl.TariffServiceImpl.getAllTariffs()] caches=[tariffs] | key='' | keyGenerator='' | cacheManager='' | cacheResolver='' | condition='' | unless='' | sync='false']
-2026-07-19 17:09:33 TRACE o.s.c.a.AnnotationCacheOperationSource - Adding cacheable method 'createTariff' with operations: [Builder[public com.electricity.electricity_billing_backend.dto.response.TariffResponse com.electricity.electricity_billing_backend.service.impl.TariffServiceImpl.createTariff(com.electricity.electricity_billing_backend.dto.request.TariffRequest)] caches=[tariffs] | key='' | keyGenerator='' | cacheManager='' | cacheResolver='' | condition='',true,false]
-2026-07-19 17:09:33 TRACE o.s.c.a.AnnotationCacheOperationSource - Adding cacheable method 'deleteTariff' with operations: [Builder[public void com.electricity.electricity_billing_backend.service.impl.TariffServiceImpl.deleteTariff(java.lang.Long)] caches=[tariffs] | key='' | keyGenerator='' | cacheManager='' | cacheResolver='' | condition='',true,false]
-2026-07-19 17:09:36 INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 14 endpoints beneath base path '/actuator'
-2026-07-19 17:09:36 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
-2026-07-19 17:09:36 INFO  c.e.e.ElectricityBillingBackendApplication - Started ElectricityBillingBackendApplication in 28.624 seconds (process running for 29.99)
-2026-07-19 17:14:16 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-07-19 17:14:16 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2026-07-19 17:14:16 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 50 ms
-2026-07-19 17:14:19 INFO  o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 1578 ms
-2026-07-19 17:14:33 ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
-io.jsonwebtoken.security.SignatureException: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
-	at io.jsonwebtoken.impl.DefaultJwtParser.verifySignature(DefaultJwtParser.java:340)
-	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:579)
-	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:364)
-	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:94)
-	at io.jsonwebtoken.impl.io.AbstractParser.parse(AbstractParser.java:36)
-	at io.jsonwebtoken.impl.io.AbstractParser.parse(AbstractParser.java:29)
-	at io.jsonwebtoken.impl.DefaultJwtParser.parseSignedClaims(DefaultJwtParser.java:830)
-	at com.electricity.electricity_billing_backend.security.JwtService.extractAllClaims(JwtService.java:73)
-	at com.electricity.electricity_billing_backend.security.JwtService.extractClaim(JwtService.java:32)
-	at com.electricity.electricity_billing_backend.security.JwtService.extractUsername(JwtService.java:28)
-	at com.electricity.electricity_billing_backend.security.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.java:41)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231)
-	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141)
-	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:110)
-	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:96)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231)
-	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141)
-	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
-	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231)
-	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141)
-	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
-	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231)
-	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141)
-	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231)
-	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141)
-	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244)
-	at org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$0(ObservationFilterChainDecorator.java:337)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:228)
-	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141)
-	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:237)
-	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:195)
-	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
-	at org.springframework.web.filter.ServletRequestPathFilter.doFilter(ServletRequestPathFilter.java:52)
-	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
-	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
-	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebSecurityConfiguration.java:317)
-	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:355)
-	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:272)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
-	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:110)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1272)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1801)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
-	at java.base/java.lang.Thread.run(Thread.java:840)
-2026-07-19 17:15:46 INFO  c.e.e.s.i.AuthenticationServiceImpl - User logged in successfully: ashish@gmail.com
-2026-07-19 17:15:57 ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
-io.jsonwebtoken.security.SignatureException: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
-	at io.jsonwebtoken.impl.DefaultJwtParser.verifySignature(DefaultJwtParser.java:340)
-	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:579)
-	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:364)
-	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:94)
-	at io.jsonwebtoken.impl.io.AbstractParser.parse(AbstractParser.java:36)
-	at io.jsonwebtoken.impl.io.AbstractParser.parse(AbstractParser.java:29)
-	at io.jsonwebtoken.impl.DefaultJwtParser.parseSignedClaims(DefaultJwtParser.java:830)
-	at com.electricity.electricity_billing_backend.security.JwtService.extractAllClaims(JwtService.java:73)
-	at com.electricity.electricity_billing_backend.security.JwtService.extractClaim(JwtService.java:32)
-	at com.electricity.electricity_billing_backend.security.JwtService.extractUsername(JwtService.java:28)
-	at com.electricity.electricity_billing_backend.security.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.java:41)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231)
-	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141)
-	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:110)
-	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:96)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231)
-	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141)
-	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
-	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231)
-	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141)
-	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
-	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231)
-	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141)
-	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231)
-	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141)
-	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244)
-	at org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$0(ObservationFilterChainDecorator.java:337)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:228)
-	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141)
-	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:237)
-	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:195)
-	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
-	at org.springframework.web.filter.ServletRequestPathFilter.doFilter(ServletRequestPathFilter.java:52)
-	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
-	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
-	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebSecurityConfiguration.java:317)
-	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:355)
-	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:272)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
-	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:110)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1272)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1801)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
-	at java.base/java.lang.Thread.run(Thread.java:840)
-2026-07-19 17:16:09 ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
-io.jsonwebtoken.security.SignatureException: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
-	at io.jsonwebtoken.impl.DefaultJwtParser.verifySignature(DefaultJwtParser.java:340)
-	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:579)
-	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:364)
-	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:94)
-	at io.jsonwebtoken.impl.io.AbstractParser.parse(AbstractParser.java:36)
-	at io.jsonwebtoken.impl.io.AbstractParser.parse(AbstractParser.java:29)
-	at io.jsonwebtoken.impl.DefaultJwtParser.parseSignedClaims(DefaultJwtParser.java:830)
-	at com.electricity.electricity_billing_backend.security.JwtService.extractAllClaims(JwtService.java:73)
-	at com.electricity.electricity_billing_backend.security.JwtService.extractClaim(JwtService.java:32)
-	at com.electricity.electricity_billing_backend.security.JwtService.extractUsername(JwtService.java:28)
-	at com.electricity.electricity_billing_backend.security.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.java:41)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231)
-	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141)
-	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:110)
-	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:96)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231)
-	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141)
-	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
-	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231)
-	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141)
-	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
-	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231)
-	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141)
-	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231)
-	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141)
-	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244)
-	at org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$0(ObservationFilterChainDecorator.java:337)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:228)
-	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141)
-	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:237)
-	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:195)
-	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
-	at org.springframework.web.filter.ServletRequestPathFilter.doFilter(ServletRequestPathFilter.java:52)
-	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
-	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
-	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebSecurityConfiguration.java:317)
-	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:355)
-	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:272)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
-	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:110)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1272)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1801)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
-	at java.base/java.lang.Thread.run(Thread.java:840)
-2026-07-19 17:20:00 INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
-2026-07-19 17:20:00 INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
-2026-07-19 17:20:00 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-07-19 17:20:00 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2026-07-19 17:20:00 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2026-07-19 17:20:06 INFO  c.e.e.ElectricityBillingBackendApplication - Starting ElectricityBillingBackendApplication using Java 17.0.19 with PID 16004 (D:\HTML AND CSS\Electiricity Billing System\electricity-billing-backend\target\classes started by panwa in D:\HTML AND CSS\Electiricity Billing System\electricity-billing-backend)
-2026-07-19 17:20:06 DEBUG c.e.e.ElectricityBillingBackendApplication - Running with Spring Boot v4.0.7, Spring v7.0.8
-2026-07-19 17:20:06 INFO  c.e.e.ElectricityBillingBackendApplication - No active profile set, falling back to 1 default profile: "default"
-2026-07-19 17:20:06 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2026-07-19 17:20:06 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2026-07-19 17:20:08 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-07-19 17:20:08 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 111 ms. Found 10 JPA repository interfaces.
-2026-07-19 17:20:09 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2026-07-19 17:20:09 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2026-07-19 17:20:09 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.22]
-2026-07-19 17:20:09 INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 2790 ms
-2026-07-19 17:20:10 INFO  org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-07-19 17:20:10 INFO  org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.2.19.Final
-2026-07-19 17:20:10 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-07-19 17:20:10 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2026-07-19 17:20:11 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@281a0bd8
-2026-07-19 17:20:11 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2026-07-19 17:20:11 INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
-	Database JDBC URL [jdbc:mysql://localhost:3306/electricity_billing_db?createDatabaseIfNotExist=true&useSSL=false&serverTimezone=UTC]
-	Database driver: MySQL Connector/J
-	Database dialect: MySQLDialect
-	Database version: 8.0.46
-	Default catalog/schema: electricity_billing_db/undefined
-	Autocommit mode: undefined/unknown
-	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
-	JDBC fetch size: none
-	Pool: DataSourceConnectionProvider
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-07-19 17:20:12 INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-07-19 17:20:12 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-07-19 17:20:12 INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-07-19 17:20:13 DEBUG c.e.e.s.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
-2026-07-19 17:20:13 INFO  o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
-2026-07-19 17:20:13 WARN  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
-2026-07-19 17:20:15 TRACE o.s.c.a.AnnotationCacheOperationSource - Adding cacheable method 'generateBill' with operations: [Builder[public com.electricity.electricity_billing_backend.dto.response.BillResponse com.electricity.electricity_billing_backend.service.impl.BillServiceImpl.generateBill(com.electricity.electricity_billing_backend.dto.request.BillRequest)] caches=[statistics] | key='' | keyGenerator='' | cacheManager='' | cacheResolver='' | condition='',true,false]
-2026-07-19 17:20:15 TRACE o.s.c.a.AnnotationCacheOperationSource - Adding cacheable method 'deleteBill' with operations: [Builder[public void com.electricity.electricity_billing_backend.service.impl.BillServiceImpl.deleteBill(java.lang.Long)] caches=[statistics] | key='' | keyGenerator='' | cacheManager='' | cacheResolver='' | condition='',true,false]
-2026-07-19 17:20:15 TRACE o.s.c.a.AnnotationCacheOperationSource - Adding cacheable method 'createConsumer' with operations: [Builder[public com.electricity.electricity_billing_backend.dto.response.ConsumerResponse com.electricity.electricity_billing_backend.service.impl.ConsumerServiceImpl.createConsumer(com.electricity.electricity_billing_backend.dto.request.ConsumerRequest)] caches=[statistics] | key='' | keyGenerator='' | cacheManager='' | cacheResolver='' | condition='',true,false]
-2026-07-19 17:20:15 TRACE o.s.c.a.AnnotationCacheOperationSource - Adding cacheable method 'updateConsumer' with operations: [Builder[public com.electricity.electricity_billing_backend.dto.response.ConsumerResponse com.electricity.electricity_billing_backend.service.impl.ConsumerServiceImpl.updateConsumer(java.lang.Long,com.electricity.electricity_billing_backend.dto.request.ConsumerRequest)] caches=[statistics] | key='' | keyGenerator='' | cacheManager='' | cacheResolver='' | condition='',true,false]
-2026-07-19 17:20:15 TRACE o.s.c.a.AnnotationCacheOperationSource - Adding cacheable method 'deleteConsumer' with operations: [Builder[public void com.electricity.electricity_billing_backend.service.impl.ConsumerServiceImpl.deleteConsumer(java.lang.Long)] caches=[statistics] | key='' | keyGenerator='' | cacheManager='' | cacheResolver='' | condition='',true,false]
-2026-07-19 17:20:15 TRACE o.s.c.a.AnnotationCacheOperationSource - Adding cacheable method 'createMeter' with operations: [Builder[public com.electricity.electricity_billing_backend.dto.response.MeterResponse com.electricity.electricity_billing_backend.service.impl.MeterServiceImpl.createMeter(com.electricity.electricity_billing_backend.dto.request.MeterRequest)] caches=[statistics] | key='' | keyGenerator='' | cacheManager='' | cacheResolver='' | condition='',true,false]
-2026-07-19 17:20:15 TRACE o.s.c.a.AnnotationCacheOperationSource - Adding cacheable method 'deleteMeter' with operations: [Builder[public void com.electricity.electricity_billing_backend.service.impl.MeterServiceImpl.deleteMeter(java.lang.Long)] caches=[statistics] | key='' | keyGenerator='' | cacheManager='' | cacheResolver='' | condition='',true,false]
-2026-07-19 17:20:15 TRACE o.s.c.a.AnnotationCacheOperationSource - Adding cacheable method 'makePayment' with operations: [Builder[public com.electricity.electricity_billing_backend.dto.response.PaymentResponse com.electricity.electricity_billing_backend.service.impl.PaymentServiceImpl.makePayment(com.electricity.electricity_billing_backend.dto.request.PaymentRequest)] caches=[statistics] | key='' | keyGenerator='' | cacheManager='' | cacheResolver='' | condition='',true,false, Builder[public com.electricity.electricity_billing_backend.dto.response.PaymentResponse com.electricity.electricity_billing_backend.service.impl.PaymentServiceImpl.makePayment(com.electricity.electricity_billing_backend.dto.request.PaymentRequest)] caches=[reports] | key='' | keyGenerator='' | cacheManager='' | cacheResolver='' | condition='',true,false]
-2026-07-19 17:20:15 TRACE o.s.c.a.AnnotationCacheOperationSource - Adding cacheable method 'getStatisticsReport' with operations: [Builder[public com.electricity.electricity_billing_backend.dto.response.StatisticsReportResponse com.electricity.electricity_billing_backend.service.impl.ReportServiceImpl.getStatisticsReport()] caches=[statistics] | key='' | keyGenerator='' | cacheManager='' | cacheResolver='' | condition='' | unless='' | sync='false']
-2026-07-19 17:20:15 TRACE o.s.c.a.AnnotationCacheOperationSource - Adding cacheable method 'deleteTariff' with operations: [Builder[public void com.electricity.electricity_billing_backend.service.impl.TariffServiceImpl.deleteTariff(java.lang.Long)] caches=[tariffs] | key='' | keyGenerator='' | cacheManager='' | cacheResolver='' | condition='',true,false]
-2026-07-19 17:20:15 TRACE o.s.c.a.AnnotationCacheOperationSource - Adding cacheable method 'updateTariff' with operations: [Builder[public com.electricity.electricity_billing_backend.dto.response.TariffResponse com.electricity.electricity_billing_backend.service.impl.TariffServiceImpl.updateTariff(java.lang.Long,com.electricity.electricity_billing_backend.dto.request.TariffRequest)] caches=[tariffs] | key='' | keyGenerator='' | cacheManager='' | cacheResolver='' | condition='',true,false]
-2026-07-19 17:20:15 TRACE o.s.c.a.AnnotationCacheOperationSource - Adding cacheable method 'getAllTariffs' with operations: [Builder[public java.util.List com.electricity.electricity_billing_backend.service.impl.TariffServiceImpl.getAllTariffs()] caches=[tariffs] | key='' | keyGenerator='' | cacheManager='' | cacheResolver='' | condition='' | unless='' | sync='false']
-2026-07-19 17:20:15 TRACE o.s.c.a.AnnotationCacheOperationSource - Adding cacheable method 'createTariff' with operations: [Builder[public com.electricity.electricity_billing_backend.dto.response.TariffResponse com.electricity.electricity_billing_backend.service.impl.TariffServiceImpl.createTariff(com.electricity.electricity_billing_backend.dto.request.TariffRequest)] caches=[tariffs] | key='' | keyGenerator='' | cacheManager='' | cacheResolver='' | condition='',true,false]
-2026-07-19 17:20:16 INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 14 endpoints beneath base path '/actuator'
-2026-07-19 17:20:17 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
-2026-07-19 17:20:17 INFO  c.e.e.ElectricityBillingBackendApplication - Started ElectricityBillingBackendApplication in 10.89 seconds (process running for 11.911)
-2026-07-19 17:20:24 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-07-19 17:20:24 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2026-07-19 17:20:24 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
-2026-07-19 17:20:29 INFO  o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 1059 ms
-2026-07-19 17:20:57 ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
-io.jsonwebtoken.security.SignatureException: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
-	at io.jsonwebtoken.impl.DefaultJwtParser.verifySignature(DefaultJwtParser.java:340)
-	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:579)
-	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:364)
-	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:94)
-	at io.jsonwebtoken.impl.io.AbstractParser.parse(AbstractParser.java:36)
-	at io.jsonwebtoken.impl.io.AbstractParser.parse(AbstractParser.java:29)
-	at io.jsonwebtoken.impl.DefaultJwtParser.parseSignedClaims(DefaultJwtParser.java:830)
-	at com.electricity.electricity_billing_backend.security.JwtService.extractAllClaims(JwtService.java:73)
-	at com.electricity.electricity_billing_backend.security.JwtService.extractClaim(JwtService.java:32)
-	at com.electricity.electricity_billing_backend.security.JwtService.extractUsername(JwtService.java:28)
-	at com.electricity.electricity_billing_backend.security.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.java:41)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231)
-	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141)
-	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:110)
-	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:96)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231)
-	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141)
-	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231)
-	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141)
-	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
-	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231)
-	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141)
-	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
-	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231)
-	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141)
-	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231)
-	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141)
-	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244)
-	at org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$0(ObservationFilterChainDecorator.java:337)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:228)
-	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141)
-	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:237)
-	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:195)
-	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
-	at org.springframework.web.filter.ServletRequestPathFilter.doFilter(ServletRequestPathFilter.java:52)
-	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
-	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
-	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebSecurityConfiguration.java:317)
-	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:355)
-	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:272)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
-	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:110)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1272)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1801)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
-	at java.base/java.lang.Thread.run(Thread.java:840)
-2026-07-19 17:32:46 INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
-2026-07-19 17:32:46 INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
-2026-07-19 17:32:46 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-07-19 17:32:47 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2026-07-19 17:32:47 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2026-07-19 17:32:52 INFO  c.e.e.ElectricityBillingBackendApplication - Starting ElectricityBillingBackendApplication using Java 17.0.19 with PID 3644 (D:\HTML AND CSS\Electiricity Billing System\electricity-billing-backend\target\classes started by panwa in D:\HTML AND CSS\Electiricity Billing System\electricity-billing-backend)
-2026-07-19 17:32:52 DEBUG c.e.e.ElectricityBillingBackendApplication - Running with Spring Boot v4.0.7, Spring v7.0.8
-2026-07-19 17:32:52 INFO  c.e.e.ElectricityBillingBackendApplication - No active profile set, falling back to 1 default profile: "default"
-2026-07-19 17:32:53 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2026-07-19 17:32:53 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2026-07-19 17:32:54 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-07-19 17:32:54 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 86 ms. Found 10 JPA repository interfaces.
-2026-07-19 17:32:55 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2026-07-19 17:32:55 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2026-07-19 17:32:55 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.22]
-2026-07-19 17:32:55 INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 2720 ms
-2026-07-19 17:32:56 INFO  org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-07-19 17:32:56 INFO  org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.2.19.Final
-2026-07-19 17:32:56 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-07-19 17:32:56 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2026-07-19 17:32:56 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@281a0bd8
-2026-07-19 17:32:56 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2026-07-19 17:32:57 INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
-	Database JDBC URL [jdbc:mysql://localhost:3306/electricity_billing_db?createDatabaseIfNotExist=true&useSSL=false&serverTimezone=UTC]
-	Database driver: MySQL Connector/J
-	Database dialect: MySQLDialect
-	Database version: 8.0.46
-	Default catalog/schema: electricity_billing_db/undefined
-	Autocommit mode: undefined/unknown
-	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
-	JDBC fetch size: none
-	Pool: DataSourceConnectionProvider
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-07-19 17:32:58 INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-07-19 17:32:58 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-07-19 17:32:58 INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-07-19 17:32:58 DEBUG c.e.e.s.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
-2026-07-19 17:32:58 INFO  o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
-2026-07-19 17:32:58 WARN  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
-2026-07-19 17:33:00 TRACE o.s.c.a.AnnotationCacheOperationSource - Adding cacheable method 'generateBill' with operations: [Builder[public com.electricity.electricity_billing_backend.dto.response.BillResponse com.electricity.electricity_billing_backend.service.impl.BillServiceImpl.generateBill(com.electricity.electricity_billing_backend.dto.request.BillRequest)] caches=[statistics] | key='' | keyGenerator='' | cacheManager='' | cacheResolver='' | condition='',true,false]
-2026-07-19 17:33:00 TRACE o.s.c.a.AnnotationCacheOperationSource - Adding cacheable method 'deleteBill' with operations: [Builder[public void com.electricity.electricity_billing_backend.service.impl.BillServiceImpl.deleteBill(java.lang.Long)] caches=[statistics] | key='' | keyGenerator='' | cacheManager='' | cacheResolver='' | condition='',true,false]
-2026-07-19 17:33:00 TRACE o.s.c.a.AnnotationCacheOperationSource - Adding cacheable method 'updateConsumer' with operations: [Builder[public com.electricity.electricity_billing_backend.dto.response.ConsumerResponse com.electricity.electricity_billing_backend.service.impl.ConsumerServiceImpl.updateConsumer(java.lang.Long,com.electricity.electricity_billing_backend.dto.request.ConsumerRequest)] caches=[statistics] | key='' | keyGenerator='' | cacheManager='' | cacheResolver='' | condition='',true,false]
-2026-07-19 17:33:00 TRACE o.s.c.a.AnnotationCacheOperationSource - Adding cacheable method 'deleteConsumer' with operations: [Builder[public void com.electricity.electricity_billing_backend.service.impl.ConsumerServiceImpl.deleteConsumer(java.lang.Long)] caches=[statistics] | key='' | keyGenerator='' | cacheManager='' | cacheResolver='' | condition='',true,false]
-2026-07-19 17:33:00 TRACE o.s.c.a.AnnotationCacheOperationSource - Adding cacheable method 'createConsumer' with operations: [Builder[public com.electricity.electricity_billing_backend.dto.response.ConsumerResponse com.electricity.electricity_billing_backend.service.impl.ConsumerServiceImpl.createConsumer(com.electricity.electricity_billing_backend.dto.request.ConsumerRequest)] caches=[statistics] | key='' | keyGenerator='' | cacheManager='' | cacheResolver='' | condition='',true,false]
-2026-07-19 17:33:00 TRACE o.s.c.a.AnnotationCacheOperationSource - Adding cacheable method 'createMeter' with operations: [Builder[public com.electricity.electricity_billing_backend.dto.response.MeterResponse com.electricity.electricity_billing_backend.service.impl.MeterServiceImpl.createMeter(com.electricity.electricity_billing_backend.dto.request.MeterRequest)] caches=[statistics] | key='' | keyGenerator='' | cacheManager='' | cacheResolver='' | condition='',true,false]
-2026-07-19 17:33:00 TRACE o.s.c.a.AnnotationCacheOperationSource - Adding cacheable method 'deleteMeter' with operations: [Builder[public void com.electricity.electricity_billing_backend.service.impl.MeterServiceImpl.deleteMeter(java.lang.Long)] caches=[statistics] | key='' | keyGenerator='' | cacheManager='' | cacheResolver='' | condition='',true,false]
-2026-07-19 17:33:00 TRACE o.s.c.a.AnnotationCacheOperationSource - Adding cacheable method 'makePayment' with operations: [Builder[public com.electricity.electricity_billing_backend.dto.response.PaymentResponse com.electricity.electricity_billing_backend.service.impl.PaymentServiceImpl.makePayment(com.electricity.electricity_billing_backend.dto.request.PaymentRequest)] caches=[statistics] | key='' | keyGenerator='' | cacheManager='' | cacheResolver='' | condition='',true,false, Builder[public com.electricity.electricity_billing_backend.dto.response.PaymentResponse com.electricity.electricity_billing_backend.service.impl.PaymentServiceImpl.makePayment(com.electricity.electricity_billing_backend.dto.request.PaymentRequest)] caches=[reports] | key='' | keyGenerator='' | cacheManager='' | cacheResolver='' | condition='',true,false]
-2026-07-19 17:33:00 TRACE o.s.c.a.AnnotationCacheOperationSource - Adding cacheable method 'getStatisticsReport' with operations: [Builder[public com.electricity.electricity_billing_backend.dto.response.StatisticsReportResponse com.electricity.electricity_billing_backend.service.impl.ReportServiceImpl.getStatisticsReport()] caches=[statistics] | key='' | keyGenerator='' | cacheManager='' | cacheResolver='' | condition='' | unless='' | sync='false']
-2026-07-19 17:33:00 TRACE o.s.c.a.AnnotationCacheOperationSource - Adding cacheable method 'createTariff' with operations: [Builder[public com.electricity.electricity_billing_backend.dto.response.TariffResponse com.electricity.electricity_billing_backend.service.impl.TariffServiceImpl.createTariff(com.electricity.electricity_billing_backend.dto.request.TariffRequest)] caches=[tariffs] | key='' | keyGenerator='' | cacheManager='' | cacheResolver='' | condition='',true,false]
-2026-07-19 17:33:00 TRACE o.s.c.a.AnnotationCacheOperationSource - Adding cacheable method 'updateTariff' with operations: [Builder[public com.electricity.electricity_billing_backend.dto.response.TariffResponse com.electricity.electricity_billing_backend.service.impl.TariffServiceImpl.updateTariff(java.lang.Long,com.electricity.electricity_billing_backend.dto.request.TariffRequest)] caches=[tariffs] | key='' | keyGenerator='' | cacheManager='' | cacheResolver='' | condition='',true,false]
-2026-07-19 17:33:00 TRACE o.s.c.a.AnnotationCacheOperationSource - Adding cacheable method 'deleteTariff' with operations: [Builder[public void com.electricity.electricity_billing_backend.service.impl.TariffServiceImpl.deleteTariff(java.lang.Long)] caches=[tariffs] | key='' | keyGenerator='' | cacheManager='' | cacheResolver='' | condition='',true,false]
-2026-07-19 17:33:00 TRACE o.s.c.a.AnnotationCacheOperationSource - Adding cacheable method 'getAllTariffs' with operations: [Builder[public java.util.List com.electricity.electricity_billing_backend.service.impl.TariffServiceImpl.getAllTariffs()] caches=[tariffs] | key='' | keyGenerator='' | cacheManager='' | cacheResolver='' | condition='' | unless='' | sync='false']
-2026-07-19 17:33:02 INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 14 endpoints beneath base path '/actuator'
-2026-07-19 17:33:02 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
-2026-07-19 17:33:02 INFO  c.e.e.ElectricityBillingBackendApplication - Started ElectricityBillingBackendApplication in 10.316 seconds (process running for 11.219)
-2026-07-19 17:33:51 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-07-19 17:33:51 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2026-07-19 17:33:51 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
-2026-07-19 17:33:52 INFO  c.e.e.s.i.AuthenticationServiceImpl - User logged in successfully: ashish@gmail.com
-2026-07-19 17:34:14 TRACE o.s.c.interceptor.CacheInterceptor - Computed cache key 'SimpleKey []' for operation Builder[public java.util.List com.electricity.electricity_billing_backend.service.impl.TariffServiceImpl.getAllTariffs()] caches=[tariffs] | key='' | keyGenerator='' | cacheManager='' | cacheResolver='' | condition='' | unless='' | sync='false'
-2026-07-19 17:34:14 TRACE o.s.c.interceptor.CacheInterceptor - No cache entry for key 'SimpleKey []' in cache(s) [tariffs]
-2026-07-19 17:34:14 INFO  c.e.e.service.impl.TariffServiceImpl - Loading Tariffs from Database...
-2026-07-19 17:34:14 TRACE o.s.c.interceptor.CacheInterceptor - Creating cache entry for key 'SimpleKey []' in cache(s) [tariffs]
-2026-07-19 17:36:34 TRACE o.s.c.interceptor.CacheInterceptor - Computed cache key 'SimpleKey []' for operation Builder[public java.util.List com.electricity.electricity_billing_backend.service.impl.TariffServiceImpl.getAllTariffs()] caches=[tariffs] | key='' | keyGenerator='' | cacheManager='' | cacheResolver='' | condition='' | unless='' | sync='false'
-2026-07-19 17:36:34 TRACE o.s.c.interceptor.CacheInterceptor - Cache entry for key 'SimpleKey []' found in cache(s) [tariffs]
-2026-07-19 17:36:58 INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
-2026-07-19 17:36:58 INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
-2026-07-19 17:36:58 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-07-19 17:36:58 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2026-07-19 17:36:58 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-08-15 22:26:25 INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-08-15 22:26:34 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-08-15 22:26:34 INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-08-15 22:26:35 INFO  o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2026-08-15 22:26:35 WARN  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2026-08-15 22:26:38 INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 14 endpoints beneath base path '/actuator'
+2026-08-15 22:26:38 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-08-15 22:26:38 INFO  c.e.e.ElectricityBillingBackendApplication - Started ElectricityBillingBackendApplication in 22.939 seconds (process running for 23.511)
+2026-08-15 22:33:39 INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-08-15 22:33:39 INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-08-15 22:33:39 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-08-15 22:33:39 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-08-15 22:33:39 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
