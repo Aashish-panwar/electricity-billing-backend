@@ -3,6 +3,8 @@ package com.electricity.electricity_billing_backend.controller;
 
 import com.electricity.electricity_billing_backend.dto.request.LoginRequest;
 import com.electricity.electricity_billing_backend.dto.request.RegisterRequest;
+import com.electricity.electricity_billing_backend.dto.request.ForgotPasswordRequest;
+import com.electricity.electricity_billing_backend.dto.request.ResetPasswordRequest;
 import com.electricity.electricity_billing_backend.dto.response.AuthenticationResponse;
 import com.electricity.electricity_billing_backend.service.AuthenticationService;
 import io.swagger.v3.oas.annotations.Operation;
@@ -38,5 +40,21 @@ public class AuthenticationController {
             @Valid @RequestBody LoginRequest request) {
 
         return ResponseEntity.ok(authenticationService.login(request));
+    }
+
+    @PostMapping("/forgot-password")
+    @Operation(summary = "Forgot Password")
+    @Tag(name = "Authentication")
+    public ResponseEntity<String> forgotPassword(@Valid @RequestBody ForgotPasswordRequest request) {
+        authenticationService.forgotPassword(request);
+        return ResponseEntity.ok("Password reset link has been sent to your email.");
+    }
+
+    @PostMapping("/reset-password")
+    @Operation(summary = "Reset Password")
+    @Tag(name = "Authentication")
+    public ResponseEntity<String> resetPassword(@Valid @RequestBody ResetPasswordRequest request) {
+        authenticationService.resetPassword(request);
+        return ResponseEntity.ok("Password has been reset successfully.");
     }
 }
