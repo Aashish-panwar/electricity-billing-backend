@@ -24,11 +24,22 @@ public class OpenApiConfig {
 
         return new OpenAPI()
 
+<<<<<<< HEAD
+                // API Servers
+                .servers(List.of(
+                        new Server()
+                                .url("http://localhost:8080")
+                                .description("Local Server"),
+                        new Server()
+                                .url("https://electricity-billing-backend-production.up.railway.app")
+                                .description("Production Server")
+=======
                 // API Server URL
                 .servers(List.of(
                         new Server()
                                 .url(backendUrl)
                                 .description("API Server")
+>>>>>>> main
                 ))
 
                 .info(
