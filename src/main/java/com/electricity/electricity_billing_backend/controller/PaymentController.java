@@ -22,6 +22,15 @@ import java.util.List;
 public class PaymentController {
 
     private final PaymentService paymentService;
+    private final com.electricity.electricity_billing_backend.service.StripeService stripeService;
+
+    @Operation(summary = "Create Stripe Checkout Session")
+    @PostMapping("/create-checkout-session")
+    @PreAuthorize("hasAnyRole('ADMIN','EMPLOYEE','CONSUMER')")
+    public ResponseEntity<java.util.Map<String, String>> createCheckoutSession(@RequestParam Long billId) {
+        String checkoutUrl = stripeService.createCheckoutSession(billId);
+        return ResponseEntity.ok(java.util.Map.of("url", checkoutUrl));
+    }
 
     @Operation(summary = "Make Payment")
     @PostMapping
