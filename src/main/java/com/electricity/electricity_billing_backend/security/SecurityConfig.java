@@ -95,7 +95,8 @@ public class SecurityConfig {
     configuration.setAllowedOriginPatterns(
             List.of(
                     "http://localhost:4200",
-                    frontendUrl
+                    frontendUrl,
+                    "https://*.vercel.app"
             )
     );
 
