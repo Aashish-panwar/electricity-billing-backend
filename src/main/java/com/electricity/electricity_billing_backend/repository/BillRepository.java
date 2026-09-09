@@ -40,6 +40,18 @@ public interface BillRepository extends JpaRepository<Bill, Long> {
             """)
     List<Bill> findByConsumerId(@Param("consumerId") Long consumerId);
 
+    @Query("""
+            SELECT b
+            FROM Bill b
+            JOIN FETCH b.consumer
+            JOIN FETCH b.meter
+            JOIN FETCH b.meterReading
+            WHERE b.consumer.email = :email
+            AND b.active = true
+            ORDER BY b.billDate DESC
+            """)
+    List<Bill> findByConsumerEmail(@Param("email") String email);
+
 
     @Query("""
             SELECT b

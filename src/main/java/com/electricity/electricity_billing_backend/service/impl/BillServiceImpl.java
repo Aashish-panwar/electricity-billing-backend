@@ -214,6 +214,16 @@ public class BillServiceImpl implements BillService {
     @Override
     public List<BillResponse> getAllBills() {
 
+        org.springframework.security.core.Authentication auth = 
+            org.springframework.security.core.context.SecurityContextHolder.getContext().getAuthentication();
+            
+        if (auth != null && auth.getAuthorities().stream().anyMatch(a -> a.getAuthority().equals("ROLE_CONSUMER"))) {
+            return billRepository.findByConsumerEmail(auth.getName())
+                    .stream()
+                    .map(billMapper::toResponse)
+                    .toList();
+        }
+
         return billRepository.findByActiveTrue()
                 .stream()
                 .map(billMapper::toResponse)

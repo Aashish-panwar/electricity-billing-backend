@@ -174,6 +174,17 @@ public class PaymentServiceImpl implements PaymentService {
     @Override
     public List<PaymentResponse> getAllPayments() {
 
+        org.springframework.security.core.Authentication auth = 
+            org.springframework.security.core.context.SecurityContextHolder.getContext().getAuthentication();
+            
+        if (auth != null && auth.getAuthorities().stream().anyMatch(a -> a.getAuthority().equals("ROLE_CONSUMER"))) {
+            return paymentRepository.findDetailsByConsumerEmail(auth.getName())
+                    .stream()
+                    .filter(Payment::getActive)
+                    .map(paymentMapper::toResponse)
+                    .toList();
+        }
+
         return paymentRepository.findAllWithDetails()
                 .stream()
                 .map(paymentMapper::toResponse)

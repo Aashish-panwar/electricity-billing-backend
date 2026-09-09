@@ -38,7 +38,7 @@ public class PaymentController {
 
     @Operation(summary = "Get All Payments")
     @GetMapping
-    @PreAuthorize("hasAnyRole('ADMIN','EMPLOYEE')")
+    @PreAuthorize("hasAnyRole('ADMIN','EMPLOYEE','CONSUMER')")
     public ResponseEntity<List<PaymentResponse>> getAllPayments() {
 
         return ResponseEntity.ok(

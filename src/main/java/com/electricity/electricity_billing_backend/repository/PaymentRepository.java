@@ -55,6 +55,16 @@ WHERE c.id = :consumerId
 SELECT p
 FROM Payment p
 JOIN FETCH p.bill b
+JOIN FETCH b.consumer c
+JOIN FETCH b.meter
+WHERE c.email = :email
+""")
+    List<Payment> findDetailsByConsumerEmail(@Param("email") String email);
+
+    @Query("""
+SELECT p
+FROM Payment p
+JOIN FETCH p.bill b
 JOIN FETCH b.consumer
 JOIN FETCH b.meter
 WHERE p.active = true

@@ -39,7 +39,7 @@ public class BillController {
 
     @Operation(summary = "Get All Bills")
     @GetMapping
-    @PreAuthorize("hasAnyRole('ADMIN','EMPLOYEE')")
+    @PreAuthorize("hasAnyRole('ADMIN','EMPLOYEE','CONSUMER')")
     public ResponseEntity<List<BillResponse>> getAllBills() {
 
         return ResponseEntity.ok(
