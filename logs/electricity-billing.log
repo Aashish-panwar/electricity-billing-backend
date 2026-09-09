@@ -79,3 +79,8 @@
 2026-09-09 20:52:53 INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 14 endpoints beneath base path '/actuator'
 2026-09-09 20:52:53 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
 2026-09-09 20:52:53 INFO  c.e.e.ElectricityBillingBackendApplication - Started ElectricityBillingBackendApplication in 31.205 seconds (process running for 32.944)
+2026-09-09 20:56:57 INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-09-09 20:56:58 INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-09-09 20:56:58 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-09-09 20:56:58 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-09-09 20:56:59 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
